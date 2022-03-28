@@ -55,6 +55,7 @@ export default function Home() {
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             name="radio-buttons-group"
+            data-testid='html-radio'
           >
             <FormControlLabel
               value="female"
