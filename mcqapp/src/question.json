@@ -1,0 +1,106 @@
+{
+    "quiz": {
+        "English": [
+             {
+                "question": "In which direction of India is the Himalayas located?",
+                "options": [
+                    "East",
+                    "West",
+                    "North",
+                    "South"
+                ],
+                "answer": "North"
+            },
+            {
+                "question": "The Bay of Bengal is In the east direction of India",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "answer": "True"
+            },
+            {
+                "question": "______ country shares land boundaries with 7 countries.",
+                "options": [
+                    "China",
+                    "Australia",
+                    "India",
+                    "Africa"
+                ],
+                "answer": "India"
+            },
+            {
+                "question": "Match the Following",
+                "url":"https://www.sarthaks.com/?qa=blob&qa_blobid=8862563841468932469",
+                "options": [
+                    "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (e), (iv) ↔ (c), (v) ↔ (d)",
+                    "(i) ↔ (e), (ii) ↔ (d), (iii) ↔ (b), (iv) ↔ (c), (v) ↔ (a)",
+                    "(i) ↔ (a), (ii) ↔ (b), (iii) ↔ (c), (iv) ↔ (e), (v) ↔ (d)",
+                    "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (d), (iv) ↔ (e), (v) ↔ (c)"
+                ],
+                "answer": "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (e), (iv) ↔ (c), (v) ↔ (d)"
+            },
+            {
+                "question": "1/2 = ?",
+                "options": [
+                    "0.5",
+                    "0.05",
+                    "0.2",
+                    "0.03"
+                ],
+                "answer": "0.5"
+            }
+        ],
+        "French": [
+             {
+                "question": "Dans quelle direction de l'India se trouve l'Himalaya ?",
+                "options": [
+                    "est",
+                    "ouest",
+                    "Nord",
+                    "Sud"
+                ],
+                "answer": "Nord"
+            },
+            {
+                "question": "Le golfe du Bengale est à l'est de l'India",
+                "options": [
+                    "Vrai",
+                    "Faux"
+                ],
+                "answer": "Vrai"
+            },
+            {
+                "question": "______ le pays partage des frontières terrestres avec 7 pays.",
+                "options": [
+                    "China",
+                    "Australia",
+                    "India",
+                    "Africa"
+                ],
+                "answer": "India"
+            },
+            {
+                "question": "Faites correspondre les éléments suivants",
+                "url":"https://www.sarthaks.com/?qa=blob&qa_blobid=8862563841468932469",
+                "options": [
+                    "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (e), (iv) ↔ (c), (v) ↔ (d)",
+                    "(i) ↔ (e), (ii) ↔ (d), (iii) ↔ (b), (iv) ↔ (c), (v) ↔ (a)",
+                    "(i) ↔ (a), (ii) ↔ (b), (iii) ↔ (c), (iv) ↔ (e), (v) ↔ (d)",
+                    "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (d), (iv) ↔ (e), (v) ↔ (c)"
+                ],
+                "answer": "(i) ↔ (b), (ii) ↔ (a), (iii) ↔ (e), (iv) ↔ (c), (v) ↔ (d)"
+            },
+            {
+                "question": "1/2 = ?",
+                "options": [
+                    "0.5",
+                    "0.05",
+                    "0.2",
+                    "0.03"
+                ],
+                "answer": "0.5"
+            }
+        ]
+    }
+}
