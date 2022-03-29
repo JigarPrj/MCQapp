@@ -334,7 +334,7 @@ export default function Questions() {
             }
           })
         : mcqs?.quiz?.French?.map((elem: any, index: any) => {
-            if (getQue === index) {
+            if (getQue === index&& index <= 3) {
               return (
                 <div key={index}>
                   <div>
@@ -442,6 +442,125 @@ export default function Questions() {
                     </RadioGroup>
                   </FormControl>
                 </div>
+              );
+            }else if (getQue === index && index === 4) {
+              return (
+                <>
+                  <br />
+                  <div>
+                    <h5>{elem?.question}</h5>
+                  </div>
+                  {elem?.url && <img src={elem?.url} />}
+                  <div style={{marginLeft:'350px'}}>
+                    <FormGroup>
+                      <FormControlLabel
+                        control={<Checkbox  />}
+                        label={elem?.options[0]}
+                        onClick={()=>{
+                          if(!getmultiOption.includes(elem?.options[0])){
+                          //@ts-ignore
+                          setgetmultiOption(getmultiOption=>[...getmultiOption,elem?.options[0]])
+                          document
+                          .getElementById("sqr" + index)
+                          ?.setAttribute(
+                            "style",
+                            "font-size:50px;color:red;"
+                          );
+                          }else{
+                            removeElement(elem?.options[0])
+                            if(getmultiOption.length ===0){
+                              document
+                              .getElementById("sqr" + index)
+                              ?.setAttribute(
+                                "style",
+                                "font-size:50px;color:grey;"
+                              );
+                            }
+                          }
+                        }}
+                      />
+                      <FormControlLabel
+                        control={<Checkbox />}
+                        label={elem?.options[1]}
+                        onClick={()=>{
+                          if(!getmultiOption.includes(elem?.options[1])){
+                          //@ts-ignore
+                          setgetmultiOption(getmultiOption=>[...getmultiOption,elem?.options[1]])
+                          document
+                          .getElementById("sqr" + index)
+                          ?.setAttribute(
+                            "style",
+                            "font-size:50px;color:red;"
+                          );
+                          }else{
+                            removeElement(elem?.options[1])
+                            if(getmultiOption.length ===0){
+                              document
+                              .getElementById("sqr" + index)
+                              ?.setAttribute(
+                                "style",
+                                "font-size:50px;color:grey;"
+                              );
+                            }
+                          }
+                        }}
+                      />
+                    <FormControlLabel
+                        control={<Checkbox />}
+                        label={elem?.options[2]}
+                        onClick={()=>{
+                          if(!getmultiOption.includes(elem?.options[2])){
+                          //@ts-ignore
+                          setgetmultiOption(getmultiOption=>[...getmultiOption,elem?.options[2]])
+                          document
+                          .getElementById("sqr" + index)
+                          ?.setAttribute(
+                            "style",
+                            "font-size:50px;color:red;"
+                          );
+                          }else{
+                            removeElement(elem?.options[2])
+                            if(getmultiOption.length ===0){
+                              document
+                              .getElementById("sqr" + index)
+                              ?.setAttribute(
+                                "style",
+                                "font-size:50px;color:grey;"
+                              );
+                            }
+                          }
+                        }}
+                      />
+                    <FormControlLabel
+                        control={<Checkbox />}
+                        label={elem?.options[3]}
+                        onClick={()=>{
+                          if(!getmultiOption.includes(elem?.options[3])){
+                          //@ts-ignore
+                          setgetmultiOption(getmultiOption=>[...getmultiOption,elem?.options[3]])
+                          document
+                          .getElementById("sqr" + index)
+                          ?.setAttribute(
+                            "style",
+                            "font-size:50px;color:red;"
+                          );
+                          }else{
+                            removeElement(elem?.options[3])
+                            if(getmultiOption.length ===0){
+                              document
+                              .getElementById("sqr" + index)
+                              ?.setAttribute(
+                                "style",
+                                "font-size:50px;color:grey;"
+                              );
+                            }
+                          }
+                        }}
+                      />
+                    </FormGroup>
+                  </div>
+                 
+                </>
               );
             }
           })}

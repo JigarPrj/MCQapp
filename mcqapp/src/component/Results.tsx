@@ -31,15 +31,16 @@ export default function Results(props:any){
       })
     }else{
       mcqs?.quiz?.French.forEach((elem:any,index:number) => {
-        if(props?.location?.state?.detail.includes(elem?.answer)){
+        if(props?.location?.state?.detail.getOption.includes(elem?.answer)){
           correct=correct+1
-        }else{
+        }else if(!props?.location?.state?.detail.getOption.includes(elem?.answer)&& index!==4){
           incorrect=incorrect+1
         }
         if(props?.location?.state?.detail?.getmultiOption?.length ===elem?.answer?.length && elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[1])&& elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[0])){
           correct=correct+1
-        }else if(props?.location?.state?.detail?.getmultiOption?.length !==elem?.answer?.length){
+        }else if(props?.location?.state?.detail?.getmultiOption?.length !==elem?.answer?.length && index===4){
           incorrect=incorrect+1
+          
         }
       })
     }
