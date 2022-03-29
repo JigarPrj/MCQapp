@@ -9,32 +9,43 @@ export default function Results(props:any){
   let correct=0;
   let incorrect=0;
   const [result, setresult] = useState<any>([]);
- 
   useEffect(() => {
     getResult()
     setResult()
   },[]);
-
+ 
   const getResult=()=>{
     if(Datas.language === "English"){
       mcqs?.quiz?.English.forEach((elem:any,index:number) => {
-        if(elem?.answer === props.location.state.detail[index]){
+        if(props?.location?.state?.detail.getOption.includes(elem?.answer)){
           correct=correct+1
-        }else{
+        }else if(!props?.location?.state?.detail.getOption.includes(elem?.answer)&& index!==4){
           incorrect=incorrect+1
+        }
+        if(props?.location?.state?.detail?.getmultiOption?.length ===elem?.answer?.length && elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[1])&& elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[0])){
+          correct=correct+1
+        }else if(props?.location?.state?.detail?.getmultiOption?.length !==elem?.answer?.length && index===4){
+          incorrect=incorrect+1
+          
         }
       })
     }else{
       mcqs?.quiz?.French.forEach((elem:any,index:number) => {
-        if(elem?.answer === props.location.state.detail[index]){
+        if(props?.location?.state?.detail.includes(elem?.answer)){
           correct=correct+1
         }else{
+          incorrect=incorrect+1
+        }
+        if(props?.location?.state?.detail?.getmultiOption?.length ===elem?.answer?.length && elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[1])&& elem?.answer.includes(props?.location?.state?.detail?.getmultiOption[0])){
+          correct=correct+1
+        }else if(props?.location?.state?.detail?.getmultiOption?.length !==elem?.answer?.length){
           incorrect=incorrect+1
         }
       })
     }
   }
  const setResult=()=>{
+   
   if(correct ===0){
     setresult([
     { title: 'Incorrect', value: incorrect, color: 'red' }])
